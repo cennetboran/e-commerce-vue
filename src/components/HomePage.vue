@@ -10,6 +10,7 @@ import NavbarPage from "../components/NavbarPage.vue"
 import HeaderPage from './HeaderPage.vue'
 
 export default {
+    name: "HomePage",
     components: {
         HeaderPage,
         NavbarPage
