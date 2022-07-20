@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import NavbarPage from "../components/NavbarPage.vue"
+import NavbarPage from "./NavbarPage.vue"
 import HeaderPage from './HeaderPage.vue'
 
 export default {

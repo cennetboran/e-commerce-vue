@@ -1,11 +1,13 @@
 
-import { createWebHistory, createRouter } from 'vue-router';
 import HomePage from "../components/HomePage"
 import FlowerPage from "../components/FlowerPage"
+import GiftPage from "../components/GiftPage"
+import BirthdayPage from "../components/BirthdayPage"
+import UsPage from "../components/UsPage"
 
 export const routes = [
     {
-        path: '/',
+        path: '',
         name: 'HomePage',
         component: HomePage
     },
@@ -14,34 +16,47 @@ export const routes = [
         name: 'FlowerPage',
         component: FlowerPage
     },
-    {
-        path: '/FlowerPage',
-        name: 'HomePage',
-        component: HomePage
-    },
+
     {
         path: '/BirthdayPage',
-        name: 'HomePage',
-        component: HomePage
+        name: 'BirthdayPage',
+        component: BirthdayPage
     },
     {
         path: '/GiftPage',
-        name: 'HomePage',
-        component: HomePage
+        name: 'GiftPage',
+        component: GiftPage
     },
     {
-        path: '/TodayPage',
-        name: 'HomePage',
-        component: HomePage
+        path: '/UsPage',
+        name: 'UsPage',
+        component: UsPage
     },
-    {
-        path: '/BonnyFood',
-        name: 'HomePage',
-        component: HomePage
-    },
+    // {
+    //     path: '/FlowerPage',
+    //     name: 'HomePage',
+    //     component: HomePage
+    // },
+    // {
+    //     path: '/BirthdayPage',
+    //     name: 'HomePage',
+    //     component: HomePage
+    // },
+    // {
+    //     path: '/GiftPage',
+    //     name: 'HomePage',
+    //     component: HomePage
+    // },
+    // {
+    //     path: '/TodayPage',
+    //     name: 'HomePage',
+    //     component: HomePage
+    // },
+    // {
+    //     path: '/BonnyFood',
+    //     name: 'HomePage',
+    //     component: HomePage
+    // },
 ]
-const router = createRouter({
-	history: createWebHistory(),
-	routes,
-});
-export default router
+
+export default routes

@@ -32,9 +32,9 @@
 .btn-31 {
   display: block;
   box-sizing: border-box;
-  padding: 10px 45px;
+  padding: 9px 45px;
    position: absolute;
-   top:4%;
+   top:4.4%;
   left: 77%;
   color: white;
   background: none;

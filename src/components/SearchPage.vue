@@ -25,18 +25,18 @@ body{
 }
 
 .search {
-  width: 100%;
+  width: 120%;
   position: relative;
   display: flex;
 }
 
 .searchTerm {
   width: 100%;
-  border: 3px solid #00B4CC;
+  border: 1px solid #00b4ccb7;
   border-right: none;
   padding: 5px;
   height: 45px;
-  border-radius: 5px 0 0 5px;
+  /* border-radius: 5px 0 0 5px; */
   outline: none;
   color: #9DBFAF;
 }
@@ -52,7 +52,7 @@ body{
   background: #00B4CC;
   text-align: center;
   color: #fff;
-  border-radius: 0 5px 5px 0;
+  /* border-radius: 0 5px 5px 0; */
   cursor: pointer;
   font-size: 20px;
 }
@@ -62,7 +62,7 @@ body{
   width: 30%;
   position:absolute;
   top: 7%;
-  left: 50%;
+  left: 46%;
   transform: translate(-50%, -50%);
 }
 </style>
