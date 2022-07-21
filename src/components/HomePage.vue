@@ -1,19 +1,15 @@
 <template>
     <div class="HomePage">
-        <HeaderPage />
-        <NavbarPage />
+       <SliderPage />
     </div>
 </template>
 
 <script>
-import NavbarPage from "./NavbarPage.vue"
-import HeaderPage from './HeaderPage.vue'
-
+import SliderPage from "./SliderPage.vue"
 export default {
     name: "HomePage",
     components: {
-        HeaderPage,
-        NavbarPage
+  SliderPage
     }
 }
 </script>
