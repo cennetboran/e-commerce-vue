@@ -34,12 +34,14 @@
   box-sizing: border-box;
   padding: 9px 45px;
    position: absolute;
-   top:4.4%;
+   top:7.4%;
   left: 77%;
   color: white;
   background: none;
   text-transform: uppercase;
-  border: 1px solid rgb(75, 147, 168);
+  border: 1px solid rgb(248, 248, 248);
+    border-radius: 5px 5px 5px 5px;
+
 }
 .btn-31:before {
   content: "";

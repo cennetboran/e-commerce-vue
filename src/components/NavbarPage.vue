@@ -1,34 +1,42 @@
 <template>
+ <v-app>
+    <v-app-bar
+      app
+      color="primary"
+      dark
+      class="app-bar"
+    >
+    <HeaderPage />
+ 
 
- <nav class="navbar navbar-expand-lg ">
+      <v-spacer></v-spacer>
 
-  <div class="container-fluid">
-     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarpage" aria-controls="navbarpage" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button> 
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <div class="navbar-nav me-auto mb-2 mb-lg-0">
-          <router-link to="/" class="nav-item nav-link" active-class="active" exact>Home</router-link>
-          <router-link to="/FlowerPage" class="nav-item nav-link" active-class="active" exact>Flowers</router-link> 
-          <router-link to="/BirthdayPage" class="nav-item nav-link" active-class="active" exact>Birthday</router-link> 
-          <router-link to="/GiftPage" class="nav-item nav-link" active-class="active" exact>Gift</router-link> 
-          <router-link to="/UsPage" class="nav-item nav-link" active-class="active" exact>Us</router-link> 
-      </div>
-      
-    </div>
-  </div>
+      <v-btn
+        href="https://github.com/vuetifyjs/vuetify/releases/latest"
+        target="_blank"
+        text
+      >
+        <span class="mr-2">Latest Release</span>
+        <v-icon>mdi-open-in-new</v-icon>
+      </v-btn>
+    </v-app-bar>
 
-</nav> 
+    <v-main>
+      <router-view/>
+    </v-main>
+  </v-app>
+
 
 </template>
 <script>
-
+import HeaderPage from "./HeaderPage.vue"
 export default {
     // eslint-disable-next-line vue/multi-word-component-names
     name: 'NavbarPage',
     components: {
-        
+        HeaderPage
     },
+    
 }
 </script>
 <style >
@@ -40,7 +48,11 @@ export default {
  .container-fluid{
    position: relative;
    left: 15%;
-   width: 15%;
-   height: 15%;
+   width: 5%;
+   height: 25%;
+ }
+ .app-bar{
+
  }
 </style>
+
