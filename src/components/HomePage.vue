@@ -1,18 +1,19 @@
 <template>
     <div class="HomePage">
-       <SliderPage />
-       <CardPage />
+        <SliderPage />
+        <CardPage />
     </div>
 </template>
 
 <script>
-import SliderPage from "./SliderPage.vue"
 import CardPage from "./CardPage.vue"
+import SliderPage from "./SliderPage.vue"
 export default {
     name: "HomePage",
     components: {
-  SliderPage,
-  CardPage
+        CardPage,
+        SliderPage
+  
     }
 }
 </script>
