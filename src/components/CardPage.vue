@@ -1,11 +1,11 @@
 <template>
 <div>
+  <v-row>
   <v-card
     class="card-1"
     max-width="344"
     v-for="item in items"
     :key="item.id"
-    row wrap
   >
     <v-img
       src="https://cdn.vuetifyjs.com/images/cards/sunshine.jpg"
@@ -13,9 +13,7 @@
     ></v-img>
     <v-card-title>
 <h3 class="headline mb-0" v-text="item.itemName"></h3>
-    </v-card-title>
-
-    <v-card-subtitle>
+    </v-card-title> <v-card-subtitle>
       1,000 miles of wonder
     </v-card-subtitle>
 
@@ -47,7 +45,7 @@
       </div>
     </v-expand-transition>
   </v-card>
-
+</v-row>
 <!-- <v-content>
       <v-container fluid grid-list-md>
                     <v-layout row wrap>
@@ -90,10 +88,19 @@
                     { id: 7, itemName: "asdsa" },
                     { id: 8, itemName: "asdsa" },
                     { id: 9, itemName: "asdsa" },
+                    { id: 10, itemName: "asdsa" },
+
       ]
     }),
   }
 </script>
 <style>
-
+.card-1{
+left: 144px;
+}
+.card-1:hover{
+  transform: scale(1.01);
+	box-shadow: 0 3px 12px 0 rgba(0, 0, 0, 0.2),
+		0 1px 15px 0 rgba(0, 0, 0, 0.19);
+}
 </style>

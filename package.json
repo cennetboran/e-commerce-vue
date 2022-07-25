@@ -13,8 +13,11 @@
     "sass-loader": "^13.0.2",
     "vue": "^2.6.14",
     "vue-carousel": "^0.18.0",
+    "vue-carousel-variable-width": "^1.1.0",
+    "vue-motion": "^0.2.3",
     "vue-router": "^3.5.4",
     "vue-simple-carousel": "^1.1.0",
+    "vue-split-carousel": "^2.2.3",
     "vuetify": "^2.6.7"
   },
   "devDependencies": {
