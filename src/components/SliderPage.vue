@@ -1,8 +1,8 @@
 <template>
   <div id="slider">
-    <carousel :per-page="4">
-      <slide v-for="item in items" :key="item">
-        <img src="https://dummyimage.com/600x400/333333/fff">
+    <carousel :per-page="3" v-bind:autoplay="true" v-bind:loop="true">
+      <slide v-for="item in items" :key="item" >
+        <img :src="item.src">
       </slide>
     </carousel>
   </div>
@@ -14,7 +14,17 @@ import { Carousel, Slide } from "vue-carousel-variable-width";
 export default {
   data() {
     return {
-      items: [1, 2, 3, 4, 5, 6]
+      //items: [1, 2, 3, 4, 5, 6,7,8],
+      items:[
+         { id: 1, itemName: "asdsa" , src:"https://cdn.vuetifyjs.com/images/cards/sunshine.jpg"},
+         { id: 2, itemName: "asdsa" , src:"https://cdn.vuetifyjs.com/images/cards/sunshine.jpg"},
+         { id: 3, itemName: "asdsa" , src:"https://cdn.vuetifyjs.com/images/cards/sunshine.jpg"},
+         { id: 4, itemName: "asdsa" , src:"https://cdn.vuetifyjs.com/images/cards/sunshine.jpg"},
+         { id: 5, itemName: "asdsa" , src:"https://cdn.vuetifyjs.com/images/cards/sunshine.jpg"},
+         { id: 6, itemName: "asdsa" , src:"https://cdn.vuetifyjs.com/images/cards/sunshine.jpg"},
+         { id: 7, itemName: "asdsa" , src:"https://cdn.vuetifyjs.com/images/cards/sunshine.jpg"},
+         { id: 8, itemName: "asdsa" , src:"https://cdn.vuetifyjs.com/images/cards/sunshine.jpg"},
+      ]
     };
   },
   components: {
@@ -37,7 +47,7 @@ body {
   margin-top: 60px;
 }
 .VueCarousel-slide {
-  width: 340px;
+  width: 240px;
   flex-basis: initial;
   padding: 0 10px;
 }
