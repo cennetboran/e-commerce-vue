@@ -1,55 +1,35 @@
 <template>
-    <div class="Baket">
-   
-
-  <button class="btn-31">
-  <span class="text-container">
-    <span class="text">Basket</span>
-  </span>
-</button>
-</div>
+  <div class="Baket">
+    <button class="btn-31">
+      <span class="text-container">
+        <span class="text">Basket</span>
+      </span>
+    </button>
+  </div>
 </template>
 <style>
-/* .btn{
-    position: absolute;
-    top:5%;
-    left: 83%;
-    width:100px;
-     border: 1px solid #00B4CC;
-  background: #00B4CC;
-  
-
-
-}
-:hover.btn{
-         border:  #00B4CC;
-         color: lightblue;
-
-} */
-
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400;800|Poppins:900);
 
 .btn-31 {
   display: block;
   box-sizing: border-box;
   padding: 9px 45px;
-   position: absolute;
-   top:7.4%;
+  position: absolute;
+  top: 15.4%;
   left: 77%;
-  color: white;
+  color: #724060;
   background: none;
   text-transform: uppercase;
-  border: 1px solid rgb(248, 248, 248);
-    border-radius: 5px 5px 5px 5px;
-
+  border: 1px solid #724060;
+  border-radius: 5px 5px 5px 5px;
 }
 .btn-31:before {
-  content: "";
+  content: '';
   z-index: -1;
   position: absolute;
   inset: 0;
   --progress: 100%;
-  background: white;
+  background: #f8ecf2;
   clip-path: polygon(100% 0, var(--progress) var(--progress), 0 100%, 100% 100%);
   transition: clip-path 0.2s;
 }
@@ -85,8 +65,4 @@
     transform: translateY(0%);
   }
 }
-
-
-
-
 </style>

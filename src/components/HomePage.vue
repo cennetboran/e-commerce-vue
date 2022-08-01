@@ -1,19 +1,21 @@
 <template>
-    <div class="HomePage">
-        <SliderPage />
-        <CardPage />
-    </div>
+  <div class="HomePage">
+    <SliderPage />
+    <CardPage />
+    <MekupPage />
+  </div>
 </template>
 
 <script>
-import CardPage from "./CardPage.vue"
-import SliderPage from "./SliderPage.vue"
+import MekupPage from './MekupPage.vue';
+import CardPage from './CardPage.vue';
+import SliderPage from './SliderPage.vue';
 export default {
-    name: "HomePage",
-    components: {
-        CardPage,
-        SliderPage
-  
-    }
-}
+  name: 'HomePage',
+  components: {
+    CardPage,
+    SliderPage,
+    MekupPage,
+  },
+};
 </script>

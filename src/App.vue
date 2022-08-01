@@ -1,24 +1,25 @@
 <template>
-<div id="app">
-        <NavbarPage />
-<router-view></router-view>
-<FooterPage />
+  <div id="app">
+    <NavbarPage />
+    <div class="main-div"><router-view></router-view></div>
+    <FooterPage />
   </div>
 </template>
 
 <script>
-import NavbarPage from "./components/NavbarPage.vue"
-import FooterPage from "./components/FooterPage.vue"
+import NavbarPage from './components/NavbarPage.vue';
+import FooterPage from './components/FooterPage.vue';
 export default {
-  name: "App",
+  name: 'App',
   components: {
-        NavbarPage,
-        FooterPage,
-        
-  }
-}
+    NavbarPage,
+    FooterPage,
+  },
+};
 </script>
 
 <style>
-
+.main-div {
+  margin-top: 90px;
+}
 </style>

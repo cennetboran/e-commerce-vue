@@ -4,6 +4,7 @@ import FlowerPage from "../components/FlowerPage"
 // import GiftPage from "../components/GiftPage"
 // import BirthdayPage from "../components/BirthdayPage"
 // import UsPage from "../components/UsPage"
+import productDetail from "../components/productDetail"
 
 export const routes = [
     {
@@ -15,6 +16,11 @@ export const routes = [
         path: '/FlowerPage',
         name: 'FlowerPage',
         component: FlowerPage
+    },
+    {
+        path: '/productDetail',
+        name: 'productDetail',
+        component: productDetail
     },
 
     // {
