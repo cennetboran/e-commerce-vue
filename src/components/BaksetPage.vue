@@ -7,6 +7,9 @@
     </button>
   </div>
 </template>
+<script>
+export default {};
+</script>
 <style>
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400;800|Poppins:900);
 

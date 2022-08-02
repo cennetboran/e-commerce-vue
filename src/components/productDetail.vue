@@ -34,12 +34,19 @@
         </button>
       </v-card>
     </v-row>
+    <back-to-top bottom="50px" right="50px">
+      <button type="button" class="btn btn-info btn-to-top">
+        <i class="fa fa-chevron-up"></i>
+      </button>
+    </back-to-top>
   </div>
 </template>
 <script>
 import { flower } from '../lib/flower';
 import { gift } from '../lib/gift';
 import { design } from '../lib/design';
+import BackToTop from 'vue-backtotop';
+
 export default {
   data: () => ({
     products: [],
@@ -83,11 +90,22 @@ export default {
       itemToAdd.qty = 1;
     },
   },
+  components: {
+    BackToTop,
+  },
 };
 </script>
 <style>
 .productDetail {
   margin-left: 90px !important;
   margin-bottom: 35px;
+}
+.btn-to-top {
+  width: 60px;
+  height: 60px;
+  padding: 10px 16px;
+  border-radius: 50%;
+  font-size: 22px;
+  line-height: 22px;
 }
 </style>
