@@ -1,45 +1,51 @@
 <template>
   <div>
-    <div>selamlar</div>
     <v-row>
       <v-card class="productDetail" max-width="344" v-for="item in products" :key="item.productId">
         <img height="180px" :src="'https://imgyukle.com/f/2022/08/01/VfRfKs.jpg'" />
         <v-card-title>
-          <h3 class="headline mb-0" v-text="item.itemName"></h3>
+          <h3 class="headline mb-0" v-text="item.name"></h3>
         </v-card-title>
         <v-card-subtitle>
-          <h1>{{ item.category }}</h1>
+          <h5>{{ item.category }}</h5>
         </v-card-subtitle>
         <v-card-actions>
           <router-link to="productDetail" tag="v-btn">
-            <v-btn color="orange lighten-2" text><span>Explore</span> </v-btn>
+            <v-btn color="orange lighten-2" text
+              ><span>{{ item.price }}</span>
+            </v-btn>
           </router-link>
+
           <v-spacer></v-spacer>
 
           <v-btn icon @click="show = !show">
             <v-icon>{{ show ? 'mdi-chevron-up' : 'mdi-chevron-down' }}</v-icon>
+            <v-expand-transition>
+              <div v-show="show">
+                <v-card-text>
+                  {{ item.instructions }}
+                </v-card-text>
+              </div>
+            </v-expand-transition>
           </v-btn>
         </v-card-actions>
-
-        <v-expand-transition>
-          <div v-show="show">
-            <v-divider></v-divider>
-
-            <v-card-text>
-              {{ item.instructions }}
-            </v-card-text>
-          </div>
-        </v-expand-transition>
+        <button @click="addToCart(item)" class="btn btn-sm btn-primary" style="height: 33px">
+          Add to Cart
+        </button>
       </v-card>
     </v-row>
   </div>
 </template>
 <script>
 import { flower } from '../lib/flower';
+import { gift } from '../lib/gift';
+import { design } from '../lib/design';
 export default {
   data: () => ({
     products: [],
     flower,
+    gift,
+    design,
   }),
 
   computed: {},
@@ -54,11 +60,34 @@ export default {
         this.products = this.gift;
       }
       if (id == 3) {
-        this.products = this.desing;
+        this.products = this.design;
       }
 
       console.log(id);
     }
   },
+  methods: {
+    // Add Items to cart
+    addToCart(itemToAdd) {
+      // Add the item or increase qty
+      let itemInCart = this.cartItems.filter((item) => item.id === itemToAdd.id);
+      let isItemInCart = itemInCart.length > 0;
+
+      if (isItemInCart === false) {
+        // eslint-disable-next-line no-undef
+        this.cartItems.push(Vue.util.extend({}, itemToAdd));
+      } else {
+        itemInCart[0].qty += itemToAdd.qty;
+      }
+
+      itemToAdd.qty = 1;
+    },
+  },
 };
 </script>
+<style>
+.productDetail {
+  margin-left: 90px !important;
+  margin-bottom: 35px;
+}
+</style>
