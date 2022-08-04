@@ -3,7 +3,7 @@ import HomePage from '../components/HomePage';
 // import BirthdayPage from "../components/BirthdayPage"
 // import UsPage from "../components/UsPage"
 import AboutPage from '../components/AboutPage';
-import productDetail from '../components/productDetail';
+import DesignPage from '../components/DesignPage';
 
 export const routes = [
   {
@@ -17,9 +17,9 @@ export const routes = [
     component: AboutPage,
   },
   {
-    path: '/productDetail',
-    name: 'productDetail',
-    component: productDetail,
+    path: '/DesignPage',
+    name: 'DesignPage',
+    component: DesignPage,
   },
 
   // {

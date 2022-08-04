@@ -20,10 +20,6 @@
             <button color="orange lighten-2" text><span>Explore</span></button>
           </router-link>
           <v-spacer></v-spacer>
-
-          <v-btn icon @click="show = !show">
-            <v-icon>{{ show ? 'mdi-chevron-up' : 'mdi-chevron-down' }}</v-icon>
-          </v-btn>
         </v-card-actions>
 
         <v-expand-transition>

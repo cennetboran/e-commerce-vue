@@ -11,7 +11,9 @@
           </template>
           <v-list>
             <v-list-item v-for="(item, index) in items" :key="index">
-              <v-list-item-title>{{ item.title }}</v-list-item-title>
+              <v-btn class="white--text ma-5" :color="colors[index]" @click="route()">
+                <v-list-item-title>{{ item.title }}</v-list-item-title>
+              </v-btn>
             </v-list-item>
           </v-list>
         </v-menu>
@@ -21,6 +23,7 @@
 </template>
 
 <script>
+import routes from '@/router';
 //import HelloWorld from "./components/HelloWorld";
 
 export default {
@@ -31,15 +34,16 @@ export default {
       menuItems: [
         { title: 'Home', path: '/', icon: 'home' },
         { title: 'About', path: '/AboutPage' },
-        { title: 'Design', path: '/DesignPage', icon: 'lock_open' },
+        { title: 'Design', path: '/DesignPage' },
       ],
-      items: [
-        { title: 'Home', path: '/', icon: 'Home' },
-        { title: 'Click Me' },
-        { title: 'Click Me' },
-        { title: 'Click Me 2' },
-      ],
+      items: [{ title: 'Home', path: '/' }, { title: 'Contract', path: '/' }, { title: 'Test' }],
+      colors: ['red lighten-4', 'red lighten-4', 'red lighten-4'],
     };
+  },
+  methods: {
+    route() {
+      console.log(routes);
+    },
   },
 };
 </script>
