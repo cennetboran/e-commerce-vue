@@ -30,7 +30,7 @@ export default {
       sidebar: false,
       menuItems: [
         { title: 'Home', path: '/', icon: 'home' },
-        { title: 'Flower', path: '/FlowerPage' },
+        { title: 'About', path: '/AboutPage' },
         { title: 'Design', path: '/DesignPage', icon: 'lock_open' },
       ],
       items: [

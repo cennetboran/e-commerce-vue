@@ -14,7 +14,7 @@ export default {
   data: () => ({
     items: [
       { title: 'HomePage', path: '/', icon: 'HomePage' },
-      { title: 'FlowerPage', path: '/FlowerPage/:id', icon: 'FlowerPage' },
+      { title: 'AboutPage', path: '/AboutPage', icon: 'AboutPage' },
       { title: 'DesignPage', path: '/DesignPage', icon: 'DesignPage' },
       { title: 'GiftPage', path: '/GiftPage', icon: 'DesignPage' },
       { title: 'AboutUs', path: '/AboutUs', icon: 'AboutUs' },

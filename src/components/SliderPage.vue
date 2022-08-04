@@ -1,7 +1,7 @@
 <template>
   <div id="slider">
     <carousel :per-page="3" v-bind:autoplay="true" v-bind:loop="true">
-      <slide v-for="item in items" :key="item">
+      <slide v-for="item in items" :key="item.id">
         <img :src="item.src" />
       </slide>
     </carousel>
@@ -16,13 +16,13 @@ export default {
     return {
       //items: [1, 2, 3, 4, 5, 6,7,8],
       items: [
-        { id: 1, itemName: 'asdsa', src: 'https://imgyukle.com/f/2022/08/01/VfS2fS.jpg' },
-        { id: 2, itemName: 'asdsa', src: 'https://imgyukle.com/f/2022/08/01/VfSWSb.jpg' },
+        { id: 1, itemName: 'asdsa', src: 'https://imgyukle.com/f/2022/08/01/VfS41P.jpg' },
+        { id: 2, itemName: 'asdsa', src: 'https://imgyukle.com/f/2022/08/01/VfuHxS.jpg' },
         { id: 3, itemName: 'asdsa', src: 'https://imgyukle.com/f/2022/08/01/VfuIHI.jpg' },
         { id: 4, itemName: 'asdsa', src: 'https://imgyukle.com/f/2022/08/01/VfS41P.jpg' },
         { id: 5, itemName: 'asdsa', src: 'https://imgyukle.com/f/2022/08/01/VfuHxS.jpg' },
         { id: 6, itemName: 'asdsa', src: 'https://imgyukle.com/f/2022/08/01/VfujQQ.jpg' },
-        { id: 7, itemName: 'asdsa', src: 'https://imgyukle.com/f/2022/08/01/VfS2fS.jpg' },
+        { id: 7, itemName: 'asdsa', src: 'https://imgyukle.com/f/2022/08/01/VfuIHI.jpg' },
         { id: 8, itemName: 'asdsa', src: 'https://imgyukle.com/f/2022/08/01/VfS41P.jpg' },
       ],
     };
